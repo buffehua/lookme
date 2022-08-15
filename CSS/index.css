@@ -1,5 +1,6 @@
 /* 最新得獎作品 */
 /* ----------------------------------- */
+
 #prize{
     margin-top: 120px;
 }
@@ -74,6 +75,8 @@
 
     .prize_group{
         flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
     .prize_pic, .prize_text{
@@ -84,7 +87,6 @@
         padding-top: 5%;
         padding-left: 0px;
     }
-
 
 }
 
@@ -238,6 +240,30 @@
     
 }
 
+
+@media screen and (max-width:768px) {
+    
+    .design_type_group ul{
+        /* margin-left: 5%; */
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        overflow: scroll;
+        white-space: nowrap;
+
+    }
+
+    .card_a, .card_b, .card_c{
+        width: 100%;
+        overflow:inherit
+
+    }
+
+
+
+
+}
+
 /* 業主反饋 */
 /* ----------------------------------- */
 .index_title{
@@ -273,12 +299,10 @@
 
 /* ----------------------------左區塊  風格 */
 .feedback_style{
-    margin-left: 20%;
+    margin-left: 22%;
     display: flex;
     position: relative;
     left: 0px;
-    /* margin-top: 10px; */
-
 }
 
 .feedback_style_plan{
@@ -301,7 +325,7 @@
 }
 
 .feedback_line{
-    width: 2px;
+    width: 1px;
     height: 40px;
     position: relative;
     bottom: -35px;
@@ -340,6 +364,67 @@
     color: var(--bgColor);
 }
 
+@media screen and (max-width:768px) {
+
+    .index_title{
+        margin-top: 70px;
+        margin-left: 5%;
+        display: flex;
+    }
+
+    .feedback_pic{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .feedback_group{
+        flex-direction: column;
+    }
+
+    .feedback_style{
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feedback_line{
+        bottom: 0;
+    }
+
+    .feedback_block{
+        width: 100%;
+        margin-right: 0;
+        margin-top: 0;
+        background-color: transparent;
+    }
+
+    .feedback_text{
+        padding: 20px;
+        color: var(--pColor);
+    }
+    
+    .feedback_text p{
+        font-size: 16px;
+        line-height: 1.7em;
+        text-align: justify;
+    }
+    
+    .feedback_member{
+        padding-top: 40px;
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--titleColor);
+    }
+    
+    .feedback_btn a{
+        padding-top: 20px;
+        color: var(--titleColor);
+    }
+
+    
+}
 
 
 
@@ -393,124 +478,67 @@ input[type=submit]:hover{
     background-color: #383838;
 }
 
-/* ----------------------------------- */
+
 /* 分點資訊 */
-.tabs_site{
-    margin-top: 30px;
+/* ----------------------------------- */
+
+.site_group{
+    margin-top: 50px;
     margin-left: 10%;
     margin-right: 10%;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 20%);
-}
-
-/* ......tabs */
-
-.tabs_site ul{
-    float: left;
-}
-
-.tabs_site ul li{
-    margin-right: -1px;
-}
-
-
-
-.tabs_site ul li a{
-    padding: 20px 40px;
-    color:var(--titleColor);
-    font-size: 18px;
-    font-weight: 800;
-}
-.tabs_site ul li .tabs_click{
-    color: var(--bgColor);
-}
-
-.tabs_site ul li a.tab_active {
-    background-color:var(--mainColor);/* 標籤顏色 */
-}
-
-.tabs_site ul li .tabs_TPE{
-    border-radius: 9px 0 0 0;
-    /* color: var(--bgColor); */
-}
-
-.tabs_site ul li:first-child a{
-    border-top: 0;
-}
-
-/* ......content */
-
-.tabs_site .tabs_content_placeholder{
-    overflow: hidden;
-    background-color:var(--mainColor);
-    padding: 20px 40px 45px;
-    text-align: center;
-    border-radius: 0 9px 9px 0;
+    display: flex;
     
 }
 
-.tabs_site .tabs_content_placeholder div{
-    display: none;
+.site_card{
+    width: 33.333333%;
+    margin: 0 20px;   
 }
 
-.tabs_site .tabs_content_placeholder div.tab_content_active{
-    display: block;
-}
-
-.tab_content_active p{
+.site_info{
+    padding: 30px 0;
     color:var(--bgColor);
-    line-height: 2em;
-    text-align: left;
-    margin: 5px 0 20px;
-    font-size: 16px;
+    background-color:var(--blockColor);
 }
 
-.tab_content_active p span{
-    color:var(--bgColor);
-    font-weight: 800;
+.site_info h3{
     font-size: 20px;
+    font-weight: 800;
+    color:var(--bgColor);
+
 }
 
+.site_info p, .site_info a{
+    font-size: 14px;
+    padding: 10px 22px;
+}
 
-
-/* ----------------------------------- */
-/* 分點資訊RWD */
-@media screen and (max-width: 768px) {
-
-    .tabs_site ul{
-        float: none;
+@media screen and (max-width:768px) {
+    .site_group{
+        margin-top: 20px;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        flex-direction: column;
     }
 
-    .tabs_site ul li{
-        display: inline-block;
-        margin-bottom: -1px;
+    .site_card{
+        width: 100%;
+        margin: 10px 0 0 0;   
     }
 
-    .tabs_site ul li a{
-
-        border-bottom: 0;
-        border-top: 0;
-        padding: 12px 15px;
+    .site_info{
+        padding: 10px 0;
+        color:var(--bgColor);
+        background-color:var(--blockColor);
     }
 
-    .tabs_site ul li a.tab_active {
-        background-color:var(--mainColor);
+    .site_info h3{
+        font-size: 16px;
+        font-weight: 800;
     }
-
-    .tabs_site ul li .tabs_TPE{
-        border-radius: 0;
+    
+    .site_info p, .site_info a{
+        font-size: 12px;
     }
-
-    .tabs_site ul li:first-child a{
-        border-left: 0;
-    }
-
-    .tabs_site .tabs_content_placeholder{
-        padding: 15px 30px 30px;
-        border-left: 0;
-        border-radius: 0 0 9px 9px;
-        background-color:var(--mainColor);
-    }
-
 }

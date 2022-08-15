@@ -1,10 +1,8 @@
-*{
-    box-sizing: border-box;
-    font-family:  Helvetica, Arial, sans-serif;
+body{
+    /* box-sizing: border-box; */
+    font-family: Arial, Helvetica, sans-serif;
     
-}
-
-:root{
+}:root{
     --blockColor:rgb( 0, 0, 0, 85% );
     --mainColor:#41403C;
     --btnColor:#EACE49;
@@ -48,8 +46,8 @@ img{
 
 .top_nav{
     width: 100%;
-    padding-left: 2%;
-    padding-right: 2%;
+    /* padding-left: 10px;
+    padding-right: 10px; */
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -75,10 +73,6 @@ img{
     letter-spacing: 3px;
     color: var(--textColor);
 }
-
-/* .nav_logo h2:hover{
-    color: var(--btnColor);
-} */
 
 /* header.............................選單 */
 
@@ -151,30 +145,6 @@ img{
     display: none;
 }
 
-
-/* header.............................992平板 */
-@media screen and (max-width:992px) {
-
-    .logo_pic{
-        display: none;
-    }
-
-    .nav_logo h2{
-        font-size: 22px;
-    }
-
-    .menu_text{
-        font-size: 15px;
-    }
-
-    .nav_btn{
-        margin-left: 10px;
-        padding: 8px 9px;
-        font-size: 14px;
-        background-color: var(--btnColor);
-    }
-}
-
 /* header.............................768手機 */
 @media screen and (max-width:769px) {
     
@@ -220,7 +190,6 @@ img{
         padding: 20px 24px;
         font-size: 16px;
         font-weight:500;
-        /* border-top: 1px solid var(--pColor); */
         color: var(--titleColor);
         background-color: var(--textColor);
     }
@@ -236,7 +205,7 @@ img{
         width: 20px;
         height: 2px;
         border-radius: 20px;
-        background-color: var(--btnColor);
+        background-color: var(--bgColor);
         position: absolute;
         left: 0;
         right: 0;
@@ -288,7 +257,7 @@ img{
     /* 下方導覽 */
     .bottom_nav{
         width: 100%;
-        padding: 1.5% 3%;
+        padding: 10px 0;
         position: fixed;
         bottom: 0;
         left: 0;

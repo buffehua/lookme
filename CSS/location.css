@@ -1,3 +1,140 @@
-h1{
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(315deg,#6A6A6A 50%,#9B9B9B 50%);
+}
+
+section{
+    margin-top: 30px;
+}
+
+.tabs_site{
+    
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 20%);
+}
+
+/* ......tabs */
+.tabs_site ul{
+    float: left;
+}
+
+.tabs_site ul li{
+    margin-right: -1px;
+}
+
+.tabs_site ul li a{
+    padding: 20px 40px;
+    color:var(--titleColor);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.tabs_site ul li .tabs_click{
+    color: var(--bgColor);
+}
+
+.tabs_site ul li a.tab_active {
+    background-color:var(--mainColor);/* 標籤顏色 */
+}
+
+.tabs_site ul li .tabs_TPE{
+    border-radius: 9px 0 0 0;
+}
+
+.tabs_site ul li:first-child a{
+    border-top: 0;
+}
+
+/* ......content */
+.tabs_site .tabs_content_placeholder{
+    overflow: hidden;
+    background-color:var(--mainColor);
+    padding: 20px 40px 45px;
+    text-align: center;
+    border-radius: 0 9px 9px 0;
+}
+
+.tabs_site .tabs_content_placeholder div{
     display: none;
+}
+
+.tabs_site .tabs_content_placeholder div.tab_content_active{
+    display: block;
+}
+
+.tab_content_active p{
+    color:var(--bgColor);
+    line-height: 2em;
+    text-align: left;
+    margin: 5px 0 20px;
+    font-size: 16px;
+}
+
+.tab_content_active p .site_span{
+    color:var(--bgColor);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+
+/* ----------------------------------- */
+/* 分點資訊RWD */
+@media screen and (max-width: 768px) {
+
+    .tabs_site{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .tabs_site ul{
+        float: none;
+    }
+
+    .tabs_site ul li{
+        display: inline-block;
+        margin-bottom: -1px;
+    }
+
+    .tabs_site ul li a{
+        border-bottom: 0;
+        border-top: 0;
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .tabs_site ul li a.tab_active {
+        background-color:var(--mainColor);
+    }
+
+    .tabs_site ul li .tabs_TPE{
+        border-radius: 0;
+    }
+
+    .tabs_site ul li:first-child a{
+        border-left: 0;
+    }
+
+    .tabs_site .tabs_content_placeholder{
+        padding: 15px 30px 30px;
+        border-left: 0;
+        border-radius: 0 0 9px 9px;
+        background-color:var(--mainColor);
+    }
+
+    .tab_content_active p{
+        font-size: 14px;
+    }
+    
+    .tab_content_active p .site_span{
+        font-size: 20px;
+    }
+
+    iframe{
+        height: 220px;
+    }
 }

@@ -1,3 +1,8 @@
+body{
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
 :root {
   --card-width: 200px;
   --card-height: 300px;
@@ -241,7 +246,6 @@ button:focus{
 
 .info .text{
   position: relative;
-  font-family: "Montserrat";
   font-size: calc(var(--card-width) * var(--text-size-offset, 0.12));
   white-space: nowrap;
   color: #fff;
@@ -315,7 +319,6 @@ button:focus{
 }
 .loading__wrapper .loader--text {
   color: #fff;
-  font-family: "Montserrat";
   font-weight: 500;
   margin-bottom: 1.4rem;
 }

@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>視那設計｜分點資訊</title>
+
+    <link rel="shortcut icon" href="./Image/shortcut_logo.png">
+
     <link rel="stylesheet" href="./CSS/reset.css">
     <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/location.css">
+
+
+    <script src="./JavaScript/jquery-3.6.0.min.js"></script>
+    <script src="./JavaScript/location.js"></script>
+
 </head>
 <body>
 
-    <h1 class="sr-only">視那設計｜住宅空間｜商業空間｜榮獲2022 義大利A' Design Award室內設計 銀獎</h1>
-    
-    <!-- 導覽列 -->
-
-
+    <!-- 導覽列 00 -->
     <header class="header">
 
         <input type="checkbox" name="" id="menu_switch">
@@ -23,7 +30,7 @@
 
             <!-- logo -->
             <div class="nav_logo">
-                <a class="logo_pic" href="./index.html"><img src="./Image/logo.png"></a>
+                <!-- <a class="logo_pic" href="./index.html"><img src="./Image/logo.png"></a> -->
                 <a class="logo_text" href="./index.html"><h2>視那設計</h2></a>
             </div>
 
@@ -41,20 +48,20 @@
                 <li><a class="menu_text" href="./living.html">住宅空間</a><div class="header_line"></div></li>
                 <li><a class="menu_text" href="./commercial.html">商業空間</a><div class="header_line"></div</li>
                 <li><a class="menu_text" href="./location.html">分點資訊</a><div class="header_line header_line_full"></div></li>
-                <li><a class="menu_text" href="./about.html">關於視那</a><div class="header_line"></div></li>
+                <li><a class="menu_text" href="./about.html">關於我們</a><div class="header_line"></div></li>
                 <li><a class="nav_btn" href="./cosult.html">線上諮詢</a></li>
-                <li><a class="nav_btn" href="./https://line.me/ti/g/Y6FJXThBgz">聯絡我們</a></li>
+                <li><a class="nav_btn contact_us" href="./https://line.me/ti/g/Y6FJXThBgz">聯絡我們</a></li>
             </ul>
 
         </nav>
         
         <nav class="bottom_nav">
-
+            <h2 class="sr_only">導覽視那設計網頁</h2>
             <!-- 下方導覽列 -->
             <ul class="bottom_menu">
                 <li>
                     <div class="nav_pic">
-                        <img src="./Image/00_original_living_icon.png" id="living_icon" title="住宅空間">
+                        <img src="./Image/00_original_living_icon.png">
                     </div>
                     <div class="nav_text">住宅空間</div>
                     <a href="./living.html"></a>
@@ -62,7 +69,7 @@
 
                 <li>
                     <div class="nav_pic">
-                        <img src="./Image/00_original_commercial_icon.png" id="commercial_icon" title="商業空間">
+                        <img src="./Image/00_original_commercial_icon.png">
                     </div>
                     <div class="nav_text">商業空間</div>
                     <a href="./commercial.html"></a>
@@ -70,7 +77,7 @@
 
                 <li>
                     <div class="nav_pic">
-                        <img src="./Image/00_original_reservation_icon.png" id="reservation_icon" title="預約設計">
+                        <img src="./Image/00_original_reservation_icon.png">
                     </div>
                     <div class="nav_text">預約設計</div>
                     <a href="./reserve.html"></a>
@@ -78,25 +85,78 @@
 
                 <li>
                     <div class="nav_pic">
-                        <img src="./Image/00_hover_location_icon.png" id="location_icon" title="分點資訊">
+                        <img src="./Image/00_original_location_icon.png">
                     </div>
-                    <div class="nav_text text_hover">分點資訊</div>
+                    <div class="nav_text">分點資訊</div>
                     <a href="./location.html"></a>
                 </li>
 
                 <li>
                     <div class="nav_pic">
-                        <img src="./Image/00_original_about_icon.png" id="about_icon" title="關於視那">
+                        <img src="./Image/00_original_about_icon.png">
                     </div>
-                    <div class="nav_text">關於視那</div>
+                    <div class="nav_text">關於我們</div>
                     <a href="./about.html"></a>
                 </li>
-
             </ul>
-
         </nav>
 
     </header>
+
+    <section class="site">
+
+        <div class="tabs_site">
+
+            <ul>
+                <li><a class="tab_active tabs_TPE tabs_click" data-index="0" href="#">台北南京店</a></li>
+                <li><a class="" data-index="1" href="#">台中勤美店</a></li>
+                <li><a class="" data-index="2" href="#">台南永康店</a></li>
+            </ul>
+    
+            <div class="tabs_content_placeholder">                     
+    
+                <div class="tab_content_active">
+
+                    <p>
+                       <span class="site_span">台北南京店</span><br>
+                        <a>02-2719-0889</a><br>
+                        台北市松山區南京東路三段688號<br>
+                    </p>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4846741104775!2d121.54631021465659!3d25.051556743742225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe806d759dd%3A0x710039b4b17550e5!2zMTA15Y-w5YyX5biC5p2-5bGx5Y2A5Y2X5Lqs5p2x6Lev5LiJ5q61Njg46Jmf!5e0!3m2!1szh-TW!2stw!4v1660564441424!5m2!1szh-TW!2stw" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+    
+                <div class="">
+
+                    <p>
+                       <span class="site_span">台中勤美店</span><br>
+                        <a>04-2393-8888</a><br>
+                        台中市西區美村路二段688號<br>
+                    </p>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.41165875064!2d120.66909761463936!3d24.122177180389663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693cfe03314cc7%3A0xc03bb79e989fd363!2zNDAy5Y-w5Lit5biC5Y2X5Y2A576O5p2R6Lev5LqM5q61Njg46Jmf!5e0!3m2!1szh-TW!2stw!4v1660564479206!5m2!1szh-TW!2stw" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+    
+                <div class="">
+
+                    <p>
+                       <span class="site_span">台南永康店</span><br>
+                        <a>06-256-08888</a><br>
+                        台南市永康區中山北路688號</span><br>
+                    </p>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.8011847970233!2d120.27637601462024!3d23.031071021790634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e709461965f17%3A0x5b8296056d97c65f!2zNzEw5Y-w5Y2X5biC5rC45bq35Y2A5Lit5bGx5YyX6LevNjg46Jmf!5e0!3m2!1szh-TW!2stw!4v1660564514053!5m2!1szh-TW!2stw" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+    
+            </div>
+    
+        </div>
+
+        
+
+    </section>
     
 </body>
 </html>
