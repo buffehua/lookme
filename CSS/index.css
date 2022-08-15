@@ -244,23 +244,11 @@
 @media screen and (max-width:768px) {
     
     .design_type_group ul{
-        /* margin-left: 5%; */
         flex-direction: row;
         flex-wrap: nowrap;
-
-        overflow: scroll;
         white-space: nowrap;
 
     }
-
-    .card_a, .card_b, .card_c{
-        width: 100%;
-        overflow:inherit
-
-    }
-
-
-
 
 }
 
@@ -427,20 +415,48 @@
 }
 
 
-
-
-
 /* 預約設計 */
 /* ----------------------------------- */
-.reservation{
-    margin-top: -160px;
-    background-image: url(../Image/00_index/reservation.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+
+#reserve{
+    margin-top: 100px;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(315deg,var(--mainColor) 50%,var(--titleColor) 50%);
+
 }
-.row{
-    padding: 50px 150px;
+
+.pic_zone > h2{
+    display: none;
 }
+
+.form_zone > h2{
+    display: none;
+}
+
+.reserve_container{
+    max-width: 1200px;
+    width:80%;
+    margin: auto auto;    
+}
+
+.reserve_group{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.208);
+    background-color:var(--bgColor);
+    overflow: hidden;
+}
+
+
+.form_zone{
+    margin: auto auto;
+    padding-left: 10px;
+}
+
 
 .form_info input, .email input, .form_modle select{
     width: 400px;
@@ -455,7 +471,7 @@
 
 .msg textarea{
     width: 400px;
-    height: 200px;
+    height: 150px;
     margin-top: 20px;
     border: none;
     border-radius: 5px;
@@ -470,14 +486,20 @@ input[type=submit]{
     border: none;
     color: #fbfbfb;
     font-weight: 600;
-    background-color: #EF6817;
+    letter-spacing: 0.03em;
+    background-color: var(--btnColor);
 }
 
 input[type=submit]:hover{
-    color:var(--bgColor);
+    color: #fbfbfb;
     background-color: #383838;
 }
 
+@media screen and (max-width:768px) {
+    .pic_zone img{
+        display: none;
+    }
+}
 
 /* 分點資訊 */
 /* ----------------------------------- */

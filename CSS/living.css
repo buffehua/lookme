@@ -1,4 +1,8 @@
-/* ============================================================== banner */
+/* banner */
+
+.banner{
+   margin-top: -70px; 
+}
 
 .banner_title{
     width: 400px;
@@ -7,10 +11,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    top: -100px;
+    margin-top: -100px;
     right: -10%;
-    background-color: rgba(56, 56, 56, 90%);
-
+    background-color:var(--blockColor);
 }
 
 
@@ -18,93 +21,57 @@
     font-size: 32px;
     font-weight: 600;
     letter-spacing: 0.2em;
-    color: #FBFBFB;
+    color: var(--bgColor);
 
 }
 
-/* ================================= section product_cotainer  */
+/*  section product_cotainer  */
 
-
+#product{
+    margin-top: 100px;
+}
 
 .cotainer{
     width: 90%;
-    /* max-width: 1200px; */
     margin-left: 5%;
     margin-right: 5%;
 }
 
 .row{
+    margin: auto;
     display: flex;
-    /* flex-wrap: wrap; */
-    padding-bottom: 60px;
-    margin: auto 0;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
 }
 
 .item{
-    width: 25%;
-    padding: 10px;
+    width: calc(100% / 4 - 30px);
+    margin: 15px;
 }
 
 
 .text{
     margin: 0px 4px;
-
 }
 
 h3{
     margin: 20px 0px;
     padding: 10px 0px;
-    border-top:  1px solid #383838;
-    border-bottom:  1px solid #383838;
+    border-top:  1px solid var(--mainColor);
+    border-bottom:  1px solid var(--mainColor);
     font-size: 20px;
     font-weight: 800;
-    color: #383838;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 10%);
+    color: var(--mainColor);
 }
 
 .text li{
     padding: 4px 0px;
-
-    /* list-style-type:decimal; */
-    /* 記得修改樣式 */
-
     font-size: 14px;
-    color: #5F605D;
-    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 10%);
+    color:var(--pColor);
 }
 
-.more_pic_btn{
-    margin: 10px 4px;
-}
-
-.more_pic_btn a{
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 14px;
-    color: #383838;
-    letter-spacing: 0.1em;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 10%);
-}
-
-.more_pic_btn a::after{
-    content:'';
-    width: 14px;
-    height: 1.5px;
-    position: relative;
-    top: 8px;
-    right: 6px;
-    background-color: #EF6817;
-}
-
-.more_pic_btn a:hover::after{
-    content: '';
-    width: 188px;
-    height: 1.5px;
-    position: relative;
-    top: 8px;
-    right: 6px;
-    background-color: #EF6817;
-    transition: 0.7s 0.4s;
+.more_pic{
+    margin: 20px 0 4px 4px;
 }
 
 .page{
@@ -122,11 +89,50 @@ h3{
 
 .page_btn a{
     margin: 0 auto;
-    color: #383838;
-    font-size: 14px;
+    color: var(--mainColor);
+    font-size: 17px;
 }
 
-.page_btn a:hover{
-    color: #EF6817;
-    border-bottom: 1px solid #EF6817;
+@media screen and (max-width:768px) {
+
+    .banner{
+        margin-top: -15px; 
+    }
+
+    .banner_title{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: auto;
+        margin-top: -150px;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        background-color:transparent;
+    }
+
+    .banner_title > h2{
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing:0;
+        letter-spacing: 0.2em;
+    }
+    
+    #product{
+        margin-top: 50px;
+    }
+
+    .item{
+        width: calc(100% / 2 - 30px);
+    }
+
+    h3, .more_pic{
+        font-size: 16px;
+
+    }
+
+    .text li{
+        font-size: 12px;
+
+    }
 }

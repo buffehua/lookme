@@ -1,13 +1,13 @@
 body{
-    background: linear-gradient(315deg,#6A6A6A 50%,#9B9B9B 50%);
+    background: linear-gradient(315deg,var(--mainColor) 50%,var(--titleColor) 50%);
 }
 
-/* ==================================================  banner */
+/* ==================================================  reserve */
 
 
-.banner{
+.reserve{
     width: 100%;
-    padding-top: 80px;
+    padding-top: 140px;
     padding-bottom: 100px;
 }
 
@@ -19,7 +19,7 @@ body{
     display: none;
 }
 
-.banner_container{
+.reserve_container{
     max-width: 1200px;
     width:80%;
     margin: auto auto;    
@@ -31,7 +31,7 @@ body{
     flex-wrap: wrap;
     border-radius: 10px;
     box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.208);
-    background-color:#e6d698;
+    background-color:var(--bgColor);
     overflow: hidden;
 }
 
@@ -55,7 +55,7 @@ body{
 
 .msg textarea{
     width: 400px;
-    height: 200px;
+    height: 150px;
     margin-top: 20px;
     border: none;
     border-radius: 5px;
@@ -71,7 +71,7 @@ input[type=submit]{
     color: #fbfbfb;
     font-weight: 600;
     letter-spacing: 0.03em;
-    background-color: #EF6817;
+    background-color: var(--btnColor);
 }
 
 input[type=submit]:hover{
