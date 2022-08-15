@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggleable Nav Button</title>
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap");
+
+:root {
+  --size: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ZCOOL XiaoWei";
+}
+
+body {
+  height: 100vh;
+  background: url("./bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-button {
+  width: var(--size);
+  height: var(--size);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  transition: all 0.3s;
+  transform-origin: center;
+}
+
+.nav-button:hover {
+  transform: scale(1.1);
+}
+
+.bg,
+.button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition-timing-function: ease-out;
+}
+
+.bg {
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: transform 1s;
+}
+
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 4%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transition: all 0.3s;
+}
+
+.button::before {
+  transform: translateY(calc(-0.08 * var(--size)));
+}
+
+.button::after {
+  transform: translateY(calc(0.08 * var(--size)));
+}
+
+.button:hover::before {
+  transform: translateY(calc(0.1 * var(--size)));
+}
+
+.button:hover::after {
+  transform: translateY(calc(-0.1 * var(--size)));
+}
+
+.active .button::before {
+  transform: rotate(45deg);
+}
+
+.active .button::after {
+  transform: rotate(-45deg);
+}
+
+.active .bg {
+  transform: scale(100);
+}
+
+.menus {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  font-size: 6.6rem;
+  line-height: 8.8rem;
+  display: none;
+}
+
+.menus li {
+  animation: hideMenus 0.4s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: calc(-0.1s * var(--i) + 0.4s);
+}
+
+.active .menus li {
+  animation: showMenus 0.4s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes hideMenus {
+  from {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes showMenus {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav-button">
+    <div class="bg"></div>
+    <button class="button"></button>
+  </nav>
+
+  <ul class="menus">
+    <li style="--i:0">Products</li>
+    <li style="--i:1">News</li>
+    <li style="--i:2">About Us</li>
+    <li style="--i:3">Contact</li>
+    <li style="--i:4">Join Us</li>
+  </ul>
+
+  <script>
+    const button = document.querySelector('.button');
+    const menus = document.querySelector('.menus');
+    button.addEventListener('click', e => {
+      document.body.classList.toggle('active');
+      if (document.body.classList.contains('active')) {
+        menus.style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+
+</html>

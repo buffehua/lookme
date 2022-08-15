@@ -1,0 +1,395 @@
+*{
+    box-sizing: border-box;
+    font-family:  Helvetica, Arial, sans-serif;
+    
+}
+
+:root{
+    --blockColor:rgb( 0, 0, 0, 85% );
+    --mainColor:#41403C;
+    --btnColor:#EACE49;
+    --titleColor:#383838;
+    --textColor:#FBFBFB;
+    --pColor:#727271;
+    --bgColor:#EDEFEE;
+    --iindColor:#AA210F;
+}
+
+.sr_only{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+img{
+	width: 100%;
+}
+
+
+/* header 開始 */
+.header_none{
+    width: 100%;
+    height: 74px;
+    position: absolute;
+    background-color:white;
+    z-index: 55;
+
+}
+
+.header{
+    width: 100%;
+    height: 68px;
+    position: sticky;
+    top: 0;
+    z-index: 44;
+}
+
+
+.top_nav{
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgb( 0, 0, 0, 50% );
+    background-color:var(--blockColor);
+}
+
+/* header.............................logo */
+
+.nav_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav_logo a{
+    padding: 4px;
+}
+
+.nav_logo h2{
+    font-size: 22px;
+    font-weight:600;
+    letter-spacing: 3px;
+    color: var(--textColor);
+}
+
+/* .nav_logo h2:hover{
+    color: var(--btnColor);
+} */
+
+/* header.............................選單 */
+
+.top_menu{
+    display: flex;   
+}
+
+.top_menu li{
+    margin: auto 0;
+    position: relative;
+}
+
+.menu_text{
+    padding: 18px 14px;
+    font-size: 17px;
+    color: var(--textColor);
+    letter-spacing: 2px;
+}
+
+.header_line{
+    width: 0%;
+    height: 3px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.8s;
+}
+
+.top_menu li:hover .header_line{
+    width: 80%;
+    height: 3px;
+    margin-left: 10%;
+    transition: width 0.5s;                 
+    background-color: var(--btnColor);
+}
+
+.header_line_full{
+    width: 80%;
+    height: 3px;
+    margin-left: 10%;
+    border-radius: 10px;
+    background-color: var(--btnColor);
+}
+
+
+/* header.............................按鈕 */
+
+.nav_btn{
+    margin-left: 14px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight:500;
+    border: 1px solid var(--btnColor);
+    color: var(--textColor);
+    transition: all 0.5s;
+}
+
+.nav_btn:hover{
+    border: 1px solid var(--btnColor);
+    color: var(--titleColor);
+    background-color: var(--btnColor);
+    transition: all 0.5s;
+}
+
+
+
+/* 媒體查詢 header RWD */
+
+#menu_switch, .bottom_nav{
+    display: none;
+}
+
+
+/* header.............................992平板 */
+@media screen and (max-width:992px) {
+
+    .logo_pic{
+        display: none;
+    }
+
+    .nav_logo h2{
+        font-size: 22px;
+    }
+
+    .menu_text{
+        font-size: 15px;
+    }
+
+    .nav_btn{
+        margin-left: 10px;
+        padding: 8px 9px;
+        font-size: 14px;
+        background-color: var(--btnColor);
+    }
+}
+
+/* header.............................768手機 */
+@media screen and (max-width:769px) {
+    
+    /* 上方導覽 */
+    /* .header_none{
+        display:none;
+    } */
+
+    .logo_pic{
+        display: none;
+    }
+
+    .logo_text{
+        margin: 12px;
+    }
+
+    .nav_logo h2{
+        font-size: 22px;
+    }
+
+    .top_menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: -105%;
+        transition: left 0.5s;
+        box-shadow: 0px 4px 10px rgb( 0, 0, 0, 50% );
+        background-color:var(--btnColor)
+    }
+
+    .menu_text, .header_line_full{
+        display: none;
+    }
+
+    #menu_switch:checked ~ .top_nav .top_menu {
+        left: 0;
+    }
+    
+    .nav_btn{
+        display: block;
+        margin-left: 0px;
+        padding: 20px 24px;
+        font-size: 16px;
+        font-weight:500;
+        /* border-top: 1px solid var(--pColor); */
+        color: var(--titleColor);
+        background-color: var(--textColor);
+    }
+
+    .hamburger_menu{
+        width: 40px;
+        height: 40px;
+        margin: auto 0;
+        position: relative;
+    }
+
+    .hamburger_menu span{
+        width: 20px;
+        height: 2px;
+        border-radius: 20px;
+        background-color: var(--btnColor);
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* 漢堡細節 */
+    .hamburger_menu span:nth-child(2){
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        opacity: 1;
+        transition: .5s cubic-bezier(.68,-.55,.27,1.55);
+    }
+
+    #menu_switch:checked ~ .top_nav .hamburger_menu span:nth-child(2){
+        opacity: 0;
+        transition: .5s cubic-bezier(.68,-.55,.27,1.55);
+    }
+
+    /* ------------------------------------------------ */
+
+    .hamburger_menu span:nth-child(1){
+        top: 13px;
+        transform: rotate(0deg);
+        transition: .5s cubic-bezier(.68,-.55,.27,1.55);
+    }
+
+    #menu_switch:checked ~ .top_nav .hamburger_menu span:nth-child(1){
+        top: 19px;
+        transform: rotate(135deg);
+        transition: .5s cubic-bezier(.68,-.55,.27,1.55);
+    }
+    
+    /* ------------------------------------------------ */
+    .hamburger_menu span:nth-child(3){
+        bottom: 13px;
+        transition: .5s cubic-bezier(.68,-.55,.27,1.55);
+    }
+    #menu_switch:checked ~ .top_nav .hamburger_menu span:nth-child(3){
+        bottom: 19px;
+        transform: rotate(-135deg);
+        transition: .5s cubic-bezier(.68,-.55,.27,1.55);
+    }
+    /* ------------------------------------------------ */
+
+
+    /* 下方導覽 */
+    .bottom_nav{
+        width: 100%;
+        padding: 1.5% 3%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        z-index: 444;
+        box-shadow: 0px -4px 10px rgb( 0, 0, 0, 50% );
+        background-color: var(--blockColor);
+    }
+
+    .bottom_menu{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottom_menu li{
+        margin: auto 0;
+        position: relative;
+    }
+
+    .nav_pic{
+        width: 24px;
+        height: 24px;
+        margin: auto;
+        position: relative;
+        
+    }
+
+    .nav_pic img{
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .nav_text{
+        padding: 10px 7px 5px 7px;
+        color:var(--textColor);
+        font-size: 11px;
+    }
+
+    .bottom_menu li a{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .text_hover{
+        color:var(--btnColor)
+    }
+}
+
+
+/* footer */
+
+.footer{
+    margin-top: 100px;
+    height: 100px;
+    background-color:var(--blockColor);
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color:var(--bgColor);
+}
+
+.copyright > p{
+    margin-top: 50px;
+}
+
+
+
+/* 按鈕規範 */
+.more_btn a{
+    display: flex;
+    font-size: 16px;
+    font-weight: 800;
+    color:var(--titleColor);
+}
+
+.more_btn a::after{
+    content: '';
+    position: relative;
+    width: 50px;
+    height: 2px;
+    top: 8px;
+    right: -10px;
+    background-color:var(--btnColor);
+    transition: all 0.6s;
+}
+
+.more_btn a:hover::after{
+    content: '';
+    position: relative;
+    width: 120px;
+    height: 2px;
+    top: 8px;
+    right: -10px;
+    background-color:var(--btnColor);
+    transition: 0.6s;
+}

@@ -1,0 +1,175 @@
+h1{
+    display: none;
+}
+
+/* ================================== section product*/
+
+.cotainer{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.row{
+    margin-top: 150px;
+    display: flex;
+}
+
+.pic_zone{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pic_zone{
+    width: 32.5%;
+}
+
+.txt_zone{
+    width: 35%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-left: 10px;
+}
+
+.text{
+    position: sticky;
+    top: 150px;
+}
+
+.pic{
+    padding: 10px;
+}
+
+.title{
+    margin: 30px auto;
+    display: flex;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 30%);
+}
+
+.line{
+    width: 3px;
+    height: 20px;
+    background-color: #383838;
+}
+
+.txt_zone h2, .txt_zone h3{
+    padding: 0px 10px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #383838;
+}
+
+.type{
+    margin-top: 20px;
+}
+
+.more{
+    margin-top: 50px;
+}
+
+.type li{
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #383838;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 10%);
+}
+
+p{
+    padding: 0 10px;
+    padding-top: 20px;
+    font-size: 15px;
+    line-height: 30px;
+    color: #727271
+}
+
+.more li{
+    padding: 0 10px;
+    line-height: 28px;
+    font-size: 18px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 10%);
+}
+
+.more li .info{
+    padding: 20px 0;
+    border-top: 1px solid #383838;
+    border-bottom: 1px solid #383838;
+    color: #383838;
+}
+
+.more li .feedback{
+    padding: 20px 0;
+    border-bottom: 1px solid #383838;
+    color: #383838;
+}
+
+.more li .info::after{
+    content: '';
+    position: relative;
+    right: -180px;
+    border: solid #383838;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(45deg);
+}
+
+
+.more li .feedback::after{
+    content: '';
+    position: relative;
+    right: -250px;
+    border: solid #383838;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(45deg);
+}
+
+/* ================================ section carousel */
+
+.carousel{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* 記得刪掉bottom */
+}
+
+.carousel_title, .group, .title_LR{
+    display: flex;
+}
+
+.carousel_title{
+    padding: 0 10px;
+    justify-content: space-between;
+}
+
+.title_line{
+    width: 4px;
+    height: 24px;
+    background-color: #EF6817;
+}
+
+
+h4{
+    padding-left: 18px;
+    box-sizing: border-box;
+    color: #383838;
+    font-size: 24px;
+    font-weight:800;
+    letter-spacing: 0.02em;
+}
+
+.group{
+    margin-top: 50px;
+}
+
+.card{
+    padding: 0 10px;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,84 @@
+h1{
+    display: none;
+}
+
+body{
+    background: linear-gradient(315deg,#6A6A6A 50%,#9B9B9B 50%);
+}
+
+/* ==================================================  banner */
+
+
+.banner{
+    width: 100%;
+    padding-top: 140px;
+    padding-bottom: 100px;
+}
+
+.pic_zone > h2{
+    display: none;
+}
+
+.form_zone > h2{
+    display: none;
+}
+
+.banner_container{
+    max-width: 1200px;
+    width:80%;
+    margin: auto auto;    
+}
+
+.reserve_group{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.208);
+    background-color:#e6d698;
+    overflow: hidden;
+}
+
+
+.form_zone{
+    margin: auto auto;
+    padding-left: 10px;
+}
+
+
+.info input, .email input, .modle select{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 80%);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.200);
+}
+
+
+.msg textarea{
+    width: 400px;
+    height: 200px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 80%);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.200);
+}
+
+input[type=submit]{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    color: #fbfbfb;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    background-color: #EF6817;
+}
+
+input[type=submit]:hover{
+    color: #fbfbfb;
+    background-color: #383838;
+}

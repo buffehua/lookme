@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>視那設計｜住宅商業空間設計</title>
+
+    <link rel="shortcut icon" href="./Image/shortcut_logo.png">
+
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/gsap_slider.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+
+
+    <script src="./JavaScript/jquery-3.6.0.min.js"></script>
+    <script src="./JavaScript/index.js"></script>
+
+</head>
+
+<body>
+
+    <h1 class="sr_only">視那設計｜住宅空間｜商業空間｜榮獲2022 義大利A' Design Award室內設計 銀獎</h1>
+    
+    <!-- 輪播區 00 -->
+    <section class="banner">
+
+        <div class="app">
+    
+            <div class="cardList">
+    
+                <button class="cardList__btn btn btn--left" style="opacity: 1; pointer-events: all;">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                    </div>
+                </button>
+    
+                <!-- 圖片 -->
+                <div class="cards__wrapper">
+                    <div class="card current--card" style="--card-translateY-offset:0%; --current-card-rotation-offset:0;">
+                        <div class="card__image">
+                            <img src="./Image/00_02.jpg">
+                        </div>
+                    </div>
+    
+                    <div class="card next--card" style="--card-translateY-offset:0%;">
+                        <div class="card__image">
+                            <img src="./Image/00_01.jpg">
+                        </div>
+                    </div>
+    
+                    <div class="card previous--card" style="--card-translateY-offset:0%;">
+                        <div class="card__image">
+                            <img src="./Image/00_03.jpg">
+                        </div>
+                    </div>
+                </div>
+    
+                <button class="cardList__btn btn btn--right" style="opacity: 1; pointer-events: all;">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+    
+            <!-- 文字區 -->
+    
+            <div class="infoList">
+                <div class="info__wrapper">
+                    <div class="info current--info" style="transform: translate3d(0px, 0px, 32px);">
+                        <h1 class="text name" style="opacity: 1; transform: translate(0px, 0px);">視那設計｜住宅商業設計</h1>
+                        <h2 class="text location" style="opacity: 1; transform: translate(0px, 0px);">最佳室內裝修設計解決方案</h2>
+                        <h2 class="text description" style="opacity: 1; transform: translate(0px, 0px);">榮獲 2022 義大利 A' Design Award 室內設計 銀獎</h2>
+                    </div>
+    
+                    <div class="info next--info">
+                        <div class="text name">ADA Design Award</div>
+                        <div class="text location">亞洲設計獎 銀獎</div>
+                        <p class="text description">2022 日本</p>
+                    </div>
+    
+                    <div class="info previous--info">
+                        <div class="text name">Muse Design Award</div>
+                        <div class="text location">室內設計類 金獎</div>
+                        <p class="text description">2020 美國</p>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="app__bg">
+                <div class="app__bg__image current--image">
+                    <img src="./Image/00_02.jpg">
+                </div>
+                <div class="app__bg__image next--image">
+                    <img src="./Image/00_01.jpg">
+                </div>
+                <div class="app__bg__image previous--image">
+                    <img src="./Image/00_03.jpg">
+                </div>
+            </div>
+    
+            <a class="scroll" href="./index.html#prize">
+                <div class="scroll_pic">
+                    <svg width="49" height="80" viewBox="0 0 49 292" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M43 216.075L3 280.5V216.075H43Z" fill="white"/>
+                        <path d="M3 0.5V216.075M3 216.075V280.5L43 216.075H3Z" stroke="white" stroke-width="6"/>
+                    </svg>
+                        
+                </div>
+                <div class="scroll_text">
+                    <p>SCROLL</p>
+                </div>
+            </a>
+    
+        </div>
+    
+        <svg class="icons" style="display: none;">
+    
+            <symbol id="arrow-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <polyline points="328 112 184 256 328 400" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></polyline>
+            </symbol>
+    
+            <symbol id="arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <polyline points="184 112 328 256 184 400" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></polyline>
+            </symbol>
+    
+        </svg>
+    
+        <script src="./JavaScript/imgloaded.js"></script>
+        <script src="./JavaScript/gsap_min.js"></script>
+        <script src="./JavaScript/gsap_script.js"></script>
+    
+    </section>
+    <!-- 輪播結束 -->
+
+
+    <!-- 導覽列 00 -->
+
+    <header class="header_none"></header>
+    <header class="header">
+
+        <input type="checkbox" name="" id="menu_switch">
+
+        <nav class="top_nav">
+
+            <!-- logo -->
+            <div class="nav_logo">
+                <!-- <a class="logo_pic" href="./index.html"><img src="./Image/logo.png"></a> -->
+                <a class="logo_text" href="./index.html"><h2>視那設計</h2></a>
+            </div>
+
+            <!-- 漢堡 -->
+            <label for="menu_switch" class="hamburger_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            
+            <!-- 上方導覽列 -->
+            <ul class="top_menu">
+                <li><a class="menu_text" href="./reserve.html">預約設計</a><div class="header_line"></div></li>
+                <li><a class="menu_text" href="./living.html">住宅空間</a><div class="header_line"></div></li>
+                <li><a class="menu_text" href="./commercial.html">商業空間</a><div class="header_line"></div</li>
+                <li><a class="menu_text" href="./location.html">分點資訊</a><div class="header_line"></div></li>
+                <li><a class="menu_text" href="./about.html">關於視那</a><div class="header_line"></div></li>
+                <li><a class="nav_btn" href="./cosult.html">線上諮詢</a></li>
+                <li><a class="nav_btn" href="./https://line.me/ti/g/Y6FJXThBgz">聯絡我們</a></li>
+            </ul>
+
+        </nav>
+        
+        <nav class="bottom_nav">
+            <h2 class="sr_only">導覽視那設計網頁</h2>
+            <!-- 下方導覽列 -->
+            <ul class="bottom_menu">
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_living_icon.png">
+                    </div>
+                    <div class="nav_text">住宅空間</div>
+                    <a href="./living.html"></a>
+                </li>
+
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_commercial_icon.png">
+                    </div>
+                    <div class="nav_text">商業空間</div>
+                    <a href="./commercial.html"></a>
+                </li>
+
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_reservation_icon.png">
+                    </div>
+                    <div class="nav_text">預約設計</div>
+                    <a href="./reserve.html"></a>
+                </li>
+
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_location_icon.png">
+                    </div>
+                    <div class="nav_text">分點資訊</div>
+                    <a href="./location.html"></a>
+                </li>
+
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_about_icon.png">
+                    </div>
+                    <div class="nav_text">關於視那</div>
+                    <a href="./about.html"></a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- 最新得獎作品介紹 01 s2-->
+    <section id="prize">
+
+        <h2 class="sr_only">2022最新得獎作品</h2>
+
+        <div class="prize_group">
+
+            <div class="prize_pic">
+                <img src="./Image/00_s2_prize.jpg" alt="墨抑 2022銀獎">
+            </div>
+
+            <div class="prize_text">
+                <div class="prize_line"></div>
+                <h3 class="prize_title">墨抑大椈｜中悅帝寶</h3>
+                <h3 class="prize_name">2022 義大利A' Design Award 室內設計類 銀獎</h3>
+                <div class="prize_content">
+                    <p>立夏之後，就是子薑的嘉年華。經過刷洗、切片、醃漬後，除了原有的辛辣鮮香，更有一種濃郁的屬於特定季節熟成的芳醇，形成舌尖上層層微刺激的雀躍，就像這屋子給人的第一印象。</p>
+                    <p>現場所有量體、造型與全景畫面解構，均採用比例較恰當的垂直、水平發展，融合木系溫度、金屬冷冽、灰階皮層和局部玻璃鏡面輕盈光影，盡興一場後現代的深情對話。</p>
+                </div>
+                <div class="more_btn prize_btn"><a href="./about.html#prize">更多得獎作品</a></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- 熱門設計風格 00 s3-->
+    <section class="design_type">
+
+        <h2 class="sr_only">熱門設計風格</h2>
+
+        <div class="design_type_group">
+
+
+            <ul>
+                <li class="card_type card_a">
+                    <div class="card_cotainer">
+                        <h3>住宅空間｜冥想寂靜</h3>
+                        <a href="./product.html" class="card_btn">更多資訊  <span>——</span></a>
+                        <p>
+                        房屋坪數：77坪<br>
+                        裝修風格：中禪風<br>
+                        空間格局：4房2廳3衛<br>
+                        房屋類型：新屋裝修<br>
+                        主要建材：義大利塗料、鐵件、環保木皮、超耐磨木地板、系統櫃、義大利磁磚<br>
+                        </p>
+                        <h4>2021德國 iF Design Award 室内建築設計賞</h4>
+                    </div>
+                </li>
+
+                <li class="card_type card_b">
+                    <div class="card_cotainer">
+                        <h3>商業空間｜大安牙醫</h3>
+                        <a href="./product.html" class="card_btn">更多資訊  <span>——</span></a>
+                        <p>
+                        房屋坪數：120坪<br>
+                        裝修風格：現代風<br>
+                        空間格局：開放式格局<br>
+                        房屋類型：舊屋裝修<br>
+                        主要建材：義大利塗料、鐵件、環保木皮、超耐磨木地板、系統櫃、義大利磁磚<br>
+                        </p>
+                        <h4>2021 台灣 TID 室內設計大獎 入圍</h4>
+                    </div>
+                </li>
+
+                <li class="card_type card_c">
+                    <div class="card_cotainer">
+                        <h3>住宅空間｜返璞歸真</h3>
+                        <a href="./product.html" class="card_btn">更多資訊  <span>——</span></a>
+                        <p>
+                        房屋坪數：66坪<br>
+                        裝修風格：古典風<br>
+                        空間格局：3房2廳3衛<br>
+                        房屋類型：新屋裝修<br>
+                        主要建材：義大利塗料、鐵件、環保木皮、超耐磨木地板、系統櫃、義大利磁磚<br>
+                        </p>
+                        <h4>2021 新加坡 SIDA 室內設計大獎  榮譽獎</h4>
+                    </div>
+                </li>
+                
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- 業主反饋 00 s4 -->
+    <section class="feedback">
+
+        <div class="index_title">
+            <div class="index_title_line"></div>
+            <h2>業主反饋</h2>
+        </div>
+      
+
+        <div class="feedback_pic">
+            <img src="./Image/00_s4_feedback.jpg" alt="業主反饋">
+        </div>
+
+        <div class="feedback_group">
+
+            <div class="feedback_style">
+
+                <div class="feedback_style_plan">
+                    <p class="feedback_style_modle">格局</p>
+                    <p class="feedback_style_unit">3房2廳</p>
+                </div>
+
+                <div class="feedback_line"></div>
+
+                <div class="feedback_style_plan">
+                    <p class="feedback_style_modle">類型</p>
+                    <p class="feedback_style_unit">住宅空間</p>
+                </div>
+
+                <div class="feedback_line"></div>
+
+                <div class="feedback_style_plan">
+                    <p class="feedback_style_modle">坪數</p>
+                    <p class="feedback_style_unit">120坪</p>
+                </div>
+
+            </div>
+
+            <div class="feedback_block">
+                <div class="feedback_text">
+                    <p>視那的開放式設計將空間感拉大，讓有飼養毛孩的我們更大的活動空間，也讓前來拜訪的親友不受拘束的感受生活品味，同時也強化收納機能設計，大量的儲物空間徹底滿足我們的置物需求。</p>
+                    <h3 class="feedback_member">群聯科技  資訊處長  曾先生推薦</h3>
+                    <div class="more_btn feedback_btn"><a href="./product.html">更多業主反饋</a></div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 預約室內設計 -->
+    <!-- <section id="reservation">
+        
+        <h2 class="sr_only">預約室內設計</h2>
+
+        <div class="cotainer">
+            
+            <h3 style="color:white">醜區塊</h3>
+
+            <div class="row">
+
+                <div class="form_info">
+                    <div class="user_name">
+                        <input id="user_name" type="text" placeholder="姓名">
+                    </div>
+
+                    <div class="tel">
+                        <input id="tel" type="tel" placeholder="聯絡電話">
+                    </div>
+
+                </div>
+
+                <div class="email">
+                    <input id="email" type="email" placeholder="電子郵箱">
+                </div>
+
+                <div class="form_modle">
+
+                    <div class="form_type">
+                        <select id="type" name="type">
+                        <option value="select">裝修類型</option>
+                        <option value="one">住宅空間設計</option>
+                        <option value="two">商業空間設計</option>
+                        </select>
+                    </div>
+
+                    <div class="form_unit">
+                        <select id="unit" name="unit">
+                        <option value="select">裝修格局</option>
+                        <option value="one">一房</option>
+                        <option value="two">二房</option>
+                        <option value="three">三房</option>
+                        <option value="four">四房以上</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="msg">
+                    <textarea name="msg" id="msg" cols="60" rows="20" placeholder="留言"></textarea>
+                </div>
+
+                <div class="btn"><input type="submit" value="確定提交"></div>
+                    
+            </div>
+            
+        </div>
+        
+    </section> -->
+
+   <!-- 分點資訊 00 s6 -->
+    <section class="site">
+
+        <div class="site_container">
+
+            <div class="index_title">
+                <div class="index_title_line"></div>
+                <h2>分點資訊</h2>
+            </div>
+
+            <div class="tabs_site">
+
+                <ul>
+                    <li><a class="tab_active tabs_TPE tabs_click" data-index="0" href="#">台北南京店</a></li>
+                    <li><a class="" data-index="1" href="#">台中勤美店</a></li>
+                    <li><a class="" data-index="2" href="#">台南永康店</a></li>
+                </ul>
+        
+                <div class="tabs_content_placeholder">                     
+        
+                    <div class="tab_content_active">
+                        <p>
+                        <span>台北南京店</span><br>
+                        TEL：02-2719-0888<br>
+                        ADD：台北市松山區南京東路三段688號<br>
+                        </p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4846741104775!2d121.54631021465659!3d25.051556743742225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abe806d759dd%3A0x710039b4b17550e5!2zMTA15Y-w5YyX5biC5p2-5bGx5Y2A5Y2X5Lqs5p2x6Lev5LiJ5q61Njg46Jmf!5e0!3m2!1szh-TW!2stw!4v1660564441424!5m2!1szh-TW!2stw" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+        
+                    <div class="">
+                        <p>
+                        <span>台中勤美店</span><br>
+                        TEL：04-2393-8888<br>
+                        ADD：台中市西區美村路二段688號<br>
+                        </p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.41165875064!2d120.66909761463936!3d24.122177180389663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693cfe03314cc7%3A0xc03bb79e989fd363!2zNDAy5Y-w5Lit5biC5Y2X5Y2A576O5p2R6Lev5LqM5q61Njg46Jmf!5e0!3m2!1szh-TW!2stw!4v1660564479206!5m2!1szh-TW!2stw" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+        
+                    <div class="">
+                        <p>
+                        <span>台南永康店</span><br>
+                        TEL：06-256-08888<br>
+                        ADD：台南市永康區中山北路688號<br>
+                        </p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.8011847970233!2d120.27637601462024!3d23.031071021790634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e709461965f17%3A0x5b8296056d97c65f!2zNzEw5Y-w5Y2X5biC5rC45bq35Y2A5Lit5bGx5YyX6LevNjg46Jmf!5e0!3m2!1szh-TW!2stw!4v1660564514053!5m2!1szh-TW!2stw" width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+        
+                </div>
+        
+            </div>
+
+        </div>
+
+    </section>
+
+   <!-- footer -->
+    <footer class="footer">
+        <div class="footer_cotainer">
+            <div class="footer_icon">
+            </div>
+            <div class="copyright"><p>Copyright © 2022 視那設計工作室 All rights reserved.</p></div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

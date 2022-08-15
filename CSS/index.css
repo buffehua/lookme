@@ -1,0 +1,516 @@
+/* 最新得獎作品 */
+/* ----------------------------------- */
+#prize{
+    margin-top: 120px;
+}
+
+.prize_group{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: -100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.prize_pic{
+    width: 50%;
+}
+
+.prize_pic img{
+    filter: grayscale(50%) brightness(110%);
+}
+
+.prize_text{
+    width: 50%;
+    margin: auto;
+    padding-left: 80px;
+    box-sizing: border-box;
+}
+
+.prize_line{
+    width: 30px;
+    height: 4px;
+    background-color:var(--iindColor);
+}
+
+.prize_title{
+    padding-top: 16px;
+    padding-bottom: 30px;
+    color:var(--titleColor);
+    font-size: 22px;
+    font-weight:800;
+}
+
+.prize_name{
+    font-size: 18px;
+    font-weight:800;
+    color:var(--titleColor);
+}
+
+.prize_content{
+    padding: 50px 0px;
+
+}
+
+.prize_text p{
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight:400;
+    line-height: 1.7em;
+    color:var(--pColor);
+    text-align: justify;
+}
+
+.prize_btn{
+    padding-top: 50px;
+}
+
+@media screen and (max-width:768px) {
+
+    #prize{
+        margin-top: 100px;
+    }
+
+    .prize_group{
+        flex-direction: column;
+    }
+
+    .prize_pic, .prize_text{
+        width: 100%;
+    }
+
+    .prize_text{
+        padding-top: 5%;
+        padding-left: 0px;
+    }
+
+
+}
+
+
+/* 熱門設計風格 */
+/* ----------------------------------- */
+
+.design_type{
+    margin-top: 100px;
+}
+.design_type_group ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card_a::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: brightness(75%);
+    background: url(../Image/00_s3_type1.jpg) no-repeat center center / 100% 100%;
+    z-index: -1;
+    transform: scale(1);
+    transition:  all 0.6s 0.1s;
+}
+
+.card_b::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: brightness(75%);
+    background: url(../Image/00_s3_type2.jpg) no-repeat center center / 100% 100%;
+    z-index: -1;
+    transform: scale(1);
+    transition:  all 0.6s 0.1s;
+}
+
+.card_c::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: brightness(75%);
+    background: url(../Image/00_s3_type3.jpg) no-repeat center center / 100% 100%;
+    z-index: -1;
+    transform: scale(1);
+    transition:  all 0.6s 0.1s;
+}
+
+.card_type::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 60%);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.card_type:hover:after{
+    opacity: 1;
+    transition: all 0.3s;
+    
+}
+
+.card_type:hover:before{
+    transform: scale(1.1, 1.1);
+    transition: all 0.6s;
+}
+
+
+.card_type:hover p{
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.card_type:hover .card_btn{
+    background-color:var(--btnColor);
+    border: 1px solid transparent;
+    transition: all 0.4s;
+    color: var(--titleColor);
+}
+
+.card_type:hover .card_btn span{
+    color: var(--bgColor);
+}
+
+.card_type{
+    width: 33.25%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.card_cotainer{
+    padding: 12%;
+    color:var(--bgColor);
+}
+
+
+.card_cotainer h3{
+    font-size: 22px;
+    font-weight: 800;
+    padding-bottom: 40px;
+}
+
+.card_btn{
+    width: 150px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid var(--bgColor);
+    border-radius: 50px;
+    font-size: 16px;
+    color: var(--bgColor);
+    font-weight: 800;
+    backdrop-filter: blur(5px);
+    transition: all 0.4s;
+}
+
+.card_btn span{
+    color:var(--btnColor)
+}
+
+.card_cotainer p{
+    padding-top: 280px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    opacity: 0;
+}
+
+.card_cotainer h4{
+    padding-top: 20px;
+    font-size: 14px;
+    
+}
+
+/* 業主反饋 */
+/* ----------------------------------- */
+.index_title{
+    margin-top: 100px;
+    margin-left: 10%;
+    display: flex;
+}
+
+.index_title_line{
+    width: 4px;
+    background-color:var(--iindColor)
+}
+
+.index_title h2{
+    padding-left: 10px;
+    box-sizing: border-box;
+    color:var(--titleColor);
+    font-size: 22px;
+    font-weight:800;
+}
+
+.feedback_pic{
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.feedback_group{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* ----------------------------左區塊  風格 */
+.feedback_style{
+    margin-left: 20%;
+    display: flex;
+    position: relative;
+    left: 0px;
+    /* margin-top: 10px; */
+
+}
+
+.feedback_style_plan{
+    padding: 30px;
+}
+
+.feedback_style_modle{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    color:var(--pColor);
+}
+
+.feedback_style_unit{
+    padding-top: 14px;
+    text-align: center;
+    font-size: 16px;
+    font-weight:800;
+    color:var(--titleColor);
+}
+
+.feedback_line{
+    width: 2px;
+    height: 40px;
+    position: relative;
+    bottom: -35px;
+    background-color:var(--mainColor);
+}
+
+
+/* ----------------------------右區塊  反饋 */
+
+.feedback_block{
+    width: 470px;
+    position: relative;
+    margin-right: 10%;
+    margin-top: -180px;
+    background-color:var(--blockColor);
+}
+
+.feedback_text{
+    padding: 20px;
+    color: var(--bgColor);
+}
+
+.feedback_text p{
+    font-size: 16px;
+    line-height: 1.7em;
+    text-align: justify;
+}
+
+.feedback_member{
+    padding-top: 60px;
+    font-size: 16px;
+}
+
+.feedback_btn a{
+    padding-top: 30px;
+    color: var(--bgColor);
+}
+
+
+
+
+
+
+/* 預約設計 */
+/* ----------------------------------- */
+.reservation{
+    margin-top: -160px;
+    background-image: url(../Image/00_index/reservation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row{
+    padding: 50px 150px;
+}
+
+.form_info input, .email input, .form_modle select{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 80%);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.200);
+}
+
+
+.msg textarea{
+    width: 400px;
+    height: 200px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 80%);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.200);
+}
+
+input[type=submit]{
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    color: #fbfbfb;
+    font-weight: 600;
+    background-color: #EF6817;
+}
+
+input[type=submit]:hover{
+    color:var(--bgColor);
+    background-color: #383838;
+}
+
+/* ----------------------------------- */
+/* 分點資訊 */
+.tabs_site{
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 20%);
+}
+
+/* ......tabs */
+
+.tabs_site ul{
+    float: left;
+}
+
+.tabs_site ul li{
+    margin-right: -1px;
+}
+
+
+
+.tabs_site ul li a{
+    padding: 20px 40px;
+    color:var(--titleColor);
+    font-size: 18px;
+    font-weight: 800;
+}
+.tabs_site ul li .tabs_click{
+    color: var(--bgColor);
+}
+
+.tabs_site ul li a.tab_active {
+    background-color:var(--mainColor);/* 標籤顏色 */
+}
+
+.tabs_site ul li .tabs_TPE{
+    border-radius: 9px 0 0 0;
+    /* color: var(--bgColor); */
+}
+
+.tabs_site ul li:first-child a{
+    border-top: 0;
+}
+
+/* ......content */
+
+.tabs_site .tabs_content_placeholder{
+    overflow: hidden;
+    background-color:var(--mainColor);
+    padding: 20px 40px 45px;
+    text-align: center;
+    border-radius: 0 9px 9px 0;
+    
+}
+
+.tabs_site .tabs_content_placeholder div{
+    display: none;
+}
+
+.tabs_site .tabs_content_placeholder div.tab_content_active{
+    display: block;
+}
+
+.tab_content_active p{
+    color:var(--bgColor);
+    line-height: 2em;
+    text-align: left;
+    margin: 5px 0 20px;
+    font-size: 16px;
+}
+
+.tab_content_active p span{
+    color:var(--bgColor);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+
+/* ----------------------------------- */
+/* 分點資訊RWD */
+@media screen and (max-width: 768px) {
+
+    .tabs_site ul{
+        float: none;
+    }
+
+    .tabs_site ul li{
+        display: inline-block;
+        margin-bottom: -1px;
+    }
+
+    .tabs_site ul li a{
+
+        border-bottom: 0;
+        border-top: 0;
+        padding: 12px 15px;
+    }
+
+    .tabs_site ul li a.tab_active {
+        background-color:var(--mainColor);
+    }
+
+    .tabs_site ul li .tabs_TPE{
+        border-radius: 0;
+    }
+
+    .tabs_site ul li:first-child a{
+        border-left: 0;
+    }
+
+    .tabs_site .tabs_content_placeholder{
+        padding: 15px 30px 30px;
+        border-left: 0;
+        border-radius: 0 0 9px 9px;
+        background-color:var(--mainColor);
+    }
+
+}

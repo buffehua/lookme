@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視那設計｜預約視那設計</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/reserve.css">
+</head>
+<body>
+
+    <h1 class="sr-only">視那設計｜住宅空間｜商業空間｜榮獲2022 義大利A' Design Award室內設計 銀獎</h1>
+    
+    <!-- 導覽列 -->
+
+
+    <header class="header">
+
+        <input type="checkbox" name="" id="menu_switch">
+
+        <nav class="top_nav">
+
+            <!-- logo -->
+            <div class="nav_logo">
+                <a class="logo_pic" href="./index.html"><img src="./Image/logo.png"></a>
+                <a class="logo_text" href="./index.html"><h2>視那設計</h2></a>
+            </div>
+
+            <!-- 漢堡 -->
+            <label for="menu_switch" class="hamburger_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            
+            <!-- 上方導覽列 -->
+            <ul class="top_menu">
+                <li><a class="menu_text" href="./reserve.html">預約設計</a><div class="header_line header_line_full"></div></li>
+                <li><a class="menu_text" href="./living.html">住宅空間</a><div class="header_line"></div></li>
+                <li><a class="menu_text" href="./commercial.html">商業空間</a><div class="header_line"></div</li>
+                <li><a class="menu_text" href="./location.html">分點資訊</a><div class="header_line"></div></li>
+                <li><a class="menu_text" href="./about.html">關於視那</a><div class="header_line"></div></li>
+                <li><a class="nav_btn" href="./cosult.html">線上諮詢</a></li>
+                <li><a class="nav_btn" href="./https://line.me/ti/g/Y6FJXThBgz">聯絡我們</a></li>
+            </ul>
+
+        </nav>
+        
+        <nav class="bottom_nav">
+
+            <!-- 下方導覽列 -->
+            <ul class="bottom_menu">
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_living_icon.png" id="living_icon" title="住宅空間">
+                    </div>
+                    <div class="nav_text">住宅空間</div>
+                    <a href="./living.html"></a>
+                </li>
+
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_commercial_icon.png" id="commercial_icon" title="商業空間">
+                    </div>
+                    <div class="nav_text">商業空間</div>
+                    <a href="./commercial.html"></a>
+                </li>
+
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_hover_reservation_icon.png" id="reservation_icon" title="預約設計">
+                    </div>
+                    <div class="nav_text text_hover">預約設計</div>
+                    <a href="./reserve.html"></a>
+                </li>
+
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_location_icon.png" id="location_icon" title="分點資訊">
+                    </div>
+                    <div class="nav_text">分點資訊</div>
+                    <a href="./location.html"></a>
+                </li>
+
+                <li>
+                    <div class="nav_pic">
+                        <img src="./Image/00_original_about_icon.png" id="about_icon" title="關於視那">
+                    </div>
+                    <div class="nav_text">關於視那</div>
+                    <a href="./about.html"></a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ---------------------------------------------------------------- banner -->
+
+    <section class="banner">
+
+        <div class="banner_container">
+
+            <div class="reserve_group">
+
+                <div class="pic_zone">
+                    <h2>預約室內設計流程</h2>
+
+                    <img src="./Image/01_reservation/reservation.jpg" alt="預約室內設計">
+                </div>
+
+                <div class="form_zone">
+
+                    <h2>預約諮詢</h2>
+
+                    <div class="info">
+                        <div class="name">
+                            <input id="user_name" type="text" placeholder="姓名">
+                        </div>
+
+                        <div class="tel">
+                            <input id="tel" type="tel" placeholder="聯絡電話">
+                        </div>
+
+                    </div>
+
+                    <div class="email">
+                        <input id="email" type="email" placeholder="電子郵箱">
+                    </div>
+
+                    <div class="modle">
+
+                        <div class="type">
+                            <select id="type" name="type">
+                            <option value="select">裝修類型</option>
+                            <option value="one">住宅空間設計</option>
+                            <option value="two">商業空間設計</option>
+                            </select>
+                        </div>
+
+                        <div class="unit">
+                            <select id="unit" name="unit">
+                            <option value="select">裝修格局</option>
+                            <option value="one">一房</option>
+                            <option value="two">二房</option>
+                            <option value="three">三房</option>
+                            <option value="four">四房以上</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="msg">
+                        <textarea name="msg" id="msg" cols="60" rows="20" placeholder="留言"></textarea>
+                    </div>
+
+                    <div class="btn"><input type="submit" value="確定提交"></div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+</body>
+</html>
