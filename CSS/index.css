@@ -1,6 +1,4 @@
 /* 最新得獎作品 */
-/* ----------------------------------- */
-
 #prize{
     margin-top: 120px;
 }
@@ -92,8 +90,6 @@
 
 
 /* 熱門設計風格 */
-/* ----------------------------------- */
-
 .design_type{
     margin-top: 100px;
 }
@@ -164,7 +160,6 @@
 .card_type:hover:after{
     opacity: 1;
     transition: all 0.3s;
-    
 }
 
 .card_type:hover:before{
@@ -193,7 +188,6 @@
     width: 33.25%;
     position: relative;
     overflow: hidden;
-
 }
 
 .card_cotainer{
@@ -210,7 +204,7 @@
 
 .card_btn{
     width: 150px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     text-align: center;
     border: 1px solid var(--bgColor);
     border-radius: 50px;
@@ -222,7 +216,7 @@
 }
 
 .card_btn span{
-    color:var(--btnColor)
+    color:var(--btnColor);
 }
 
 .card_cotainer p{
@@ -239,22 +233,27 @@
     font-size: 14px;
     
 }
-
-
+/* RWD */
 @media screen and (max-width:768px) {
     
     .design_type_group ul{
-        flex-direction: row;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        flex-shrink: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
+    .card_type{
+        width: 100%;
+        margin-bottom: 50px;
+        /* position: relative;
+        overflow: hidden; */
     }
 
 }
 
 /* 業主反饋 */
-/* ----------------------------------- */
 .index_title{
     margin-top: 100px;
     margin-left: 10%;
@@ -286,7 +285,7 @@
     position: relative;
 }
 
-/* ----------------------------左區塊  風格 */
+/* ------左區塊*/
 .feedback_style{
     margin-left: 22%;
     display: flex;
@@ -322,8 +321,7 @@
 }
 
 
-/* ----------------------------右區塊  反饋 */
-
+/* ------右區塊 */
 .feedback_block{
     width: 470px;
     position: relative;
@@ -411,21 +409,16 @@
         padding-top: 20px;
         color: var(--titleColor);
     }
-
-    
 }
 
 
 /* 預約設計 */
-/* ----------------------------------- */
-
 #reserve{
     margin-top: 100px;
     width: 100%;
     padding-top: 100px;
     padding-bottom: 100px;
     background: linear-gradient(315deg,var(--mainColor) 50%,var(--titleColor) 50%);
-
 }
 
 .pic_zone > h2{
@@ -503,14 +496,11 @@ input[type=submit]:hover{
 }
 
 /* 分點資訊 */
-/* ----------------------------------- */
-
 .site_group{
     margin-top: 50px;
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
-    
 }
 
 .site_card{
@@ -528,7 +518,6 @@ input[type=submit]:hover{
     font-size: 20px;
     font-weight: 800;
     color:var(--bgColor);
-
 }
 
 .site_info p, .site_info a{
